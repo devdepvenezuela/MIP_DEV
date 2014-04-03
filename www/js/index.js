@@ -27,7 +27,7 @@ var app = {
 		wrapper.className = 'cssClass';
 			
 		// Leemos por ajax el archivos opcion1.html de la carpeta opciones
-		xhReq.open("GET", "opciones/opcion1.html", false);
+		xhReq.open("GET", "opciones/opcion.html", false);
 		xhReq.send(null);
 		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
 
