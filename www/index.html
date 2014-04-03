@@ -26,9 +26,7 @@
 document.addEventListener("deviceready", function() {
 	navigator.geolocation.getCurrentPosition(function(posicion){
 		alert("se te ha ubicado en " + posicion.coords.latitude + " y " + posicion.coords.longitude);
-		navigator.notification.beep(2);
-		navigator.notification.vibrate(400);
-		
+
 		},
 		function (){alert("ubicar tu dispositivo");});} ,false);
 </script>
@@ -49,7 +47,6 @@ document.addEventListener("deviceready", function() {
     </div> 
   </div> 
 </div>
-<div id="footer" style="bottom:0; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#000">DevelopmentDeployment</div>
         <script type="text/javascript" src="phonegap.js"></script>
 		<script src="js/fastclick.js"></script>
 		<script src="js/iscroll.js"></script>
