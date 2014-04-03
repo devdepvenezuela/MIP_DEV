@@ -22,14 +22,26 @@
  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Demo Menu</title>
-        <script type="text/javascript">
-document.addEventListener("deviceready", function() {
-	navigator.geolocation.getCurrentPosition(function(posicion){
-		alert("se te ha ubicado en " + posicion.coords.latitude + " y " + posicion.coords.longitude);
+    <script type="text/javascript" charset="utf-8">
 
-		},
-		function (){alert("ubicar tu dispositivo");});} ,false);
-</script>
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // Cordova is ready
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('contenidoCuerpo');
+
+        element.innerHTML = 'Device Name: '     + device.name     + '<br />' + 
+                            'Device Cordova: '  + device.cordova + '<br />' + 
+                            'Device Platform: ' + device.platform + '<br />' + 
+                            'Device UUID: '     + device.uuid     + '<br />' + 
+                            'Device Model: '    + device.model     + '<br />' + 
+                            'Device Version: '  + device.version  + '<br />';
+    }
+
+    </script>
     </head>
     <body>
 <div id="menuprincipal"> 
