@@ -32,13 +32,18 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-		
+		document.getElementById("crear").addEventListener("click", save(),false);
 		 
     }
 	
 	    // alert dialog dismissed
     function alertDismissed() {
         // do something
+    }
+	
+	function save() {
+		localStorage.setItem("name","John");
+		alert(localStorage.getItem("name"));
     }
 	
 
