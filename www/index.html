@@ -21,6 +21,7 @@
     <head>
  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.0.min.css" />
         <title>Demo Menu</title>
     <script type="text/javascript" charset="utf-8">
 
@@ -31,7 +32,23 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-alert('Bienvenido a MIP, ingrese sus datos');
+		
+    }
+	
+	    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            alertDismissed,         // callback
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
     }
 
     </script>
