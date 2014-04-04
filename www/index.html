@@ -33,23 +33,36 @@
     //
     function onDeviceReady() {
 		
+		 
     }
 	
 	    // alert dialog dismissed
     function alertDismissed() {
         // do something
     }
+	
+
 
     // Show a custom alert
     //
-    function showAlert() {
-        navigator.notification.alert(
+		function ShowAlert() {
+		
+		document.getElementById("crear").addEventListener("click", function(){
+			
+			navigator.notification.alert(
             'You are the winner!',  // message
             alertDismissed,         // callback
             'Game Over',            // title
             'Done'                  // buttonName
         );
+		alert('Bienvenido');
+			},false);
+        // do something
     }
+   
+		
+       
+   
 
     </script>
     </head>
