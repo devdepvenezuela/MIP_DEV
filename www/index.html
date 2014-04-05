@@ -32,7 +32,7 @@
     // Cordova is ready
     //
     function onDeviceReady() {
-		alert('Bienvenido');
+		validate();
 		document.getElementById("crear").addEventListener("click", save(),false);
 		document.getElementById("leer").addEventListener("click", read(),false);
 		document.getElementById("do").addEventListener("click",
@@ -41,36 +41,33 @@
     }
 	
 	    // alert dialog dismissed
-    function alertDismissed() {
-        // do something
+    function onConfirm(buttonIndex) {
+        if(buttonIndex == 1)
+		{menu(2);}
+		else
+		{ 
+		 navigator.notification.alert(
+            'Podra actualizar sus datos desde la opción "Mis Datos" en el menú principal de MIP', 
+            'MIP',            
+            'Aceptar'                  
+        );
+		}
     }
 	
 	function save() {
-		alert(device.name);
-		
-
+		navigator.notification.beep(2);
     }
 	
-	function read() {
-		navigator.notification.alert(
-            'You are the winner!',  // message
-            alertDismissed,         // callback
-            'Game Over',            // title
-            'Done'                  // buttonName
+	function validate() {
+		navigator.notification.confirm(
+        'Debe registrar sus datos, desea hacerlo ahora?', 
+         onConfirm,            
+        'MIP',           
+        'Si,Ahora no'        
         );
-		
 
     }
-	
-	
 
-
-    // Show a custom alert
-    //
-		function dos() {
-	alert('Bienvenido');
-			}
-        // do something
 
     </script>
     </head>
