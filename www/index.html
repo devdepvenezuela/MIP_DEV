@@ -24,23 +24,12 @@
         
         <title>Demo Menu</title>
     <script type="text/javascript" charset="utf-8">
-
-    // Wait for Cordova to load
-    //
     document.addEventListener("deviceready", onDeviceReady, false);
-
-    // Cordova is ready
-    //
     function onDeviceReady() {
-		validate();
-		document.getElementById("crear").addEventListener("click", save(),false);
-		document.getElementById("leer").addEventListener("click", read(),false);
-		document.getElementById("do").addEventListener("click",
-		dos(),false);
-		 
+		validate();	<!--document.getElementById("crear").addEventListener("click", save(),false);-->
+		document.getElementById("leer").addEventListener("click", read(),false); 
     }
 	
-	    // alert dialog dismissed
     function onConfirm(buttonIndex) {
         if(buttonIndex == 1)
 		{menu(2);}
