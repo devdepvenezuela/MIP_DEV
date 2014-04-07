@@ -55,18 +55,24 @@
 	
     function save() {
 		var docname = document.getElementById("med_nombre").value;
+		var docci = document.getElementById("med_ci").value;
+				var doctelf = document.getElementById("med_telf").value;
+						var doccentro = document.getElementById("med_centro").value;
+								var docemail = document.getElementById("med_email").value;
+										var docpais = document.getElementById("med_pais").value;
+						
 		localStorage.setItem("name", docname);
-		alert(docname);
-		
-	/*	navigator.notification.alert(
-            'datos: ' + docname + ' ' + doctlf + ' ' + doccentro + ' ' + docmail + ' ' + docpais , 
+		localStorage.setItem("name", docci);
+		localStorage.setItem("name", doctelf);				
+		localStorage.setItem("name", doccentro);
+		localStorage.setItem("name", docemail);
+		localStorage.setItem("name", docpais);						
+	navigator.notification.alert(
+            'Datos registrados' , 
             'MIP',            
             'Aceptar'                  
-        );*/
-		 
-
+        );
     }
-
     </script>
     </head>
     <body>
