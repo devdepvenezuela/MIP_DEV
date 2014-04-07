@@ -42,26 +42,7 @@
         );
 		}
     }
-	
-	function save() {
-		var docname = document.getElementById("med_nombre").value;
-		var docci = document.getElementById("med_ci").value;
-		var doctlf = document.getElementById("med_telf").value;
-		var doccentro = document.getElementById("med_centro").value;
-		var docmail = document.getElementById("med_email").value;
-		var docpais = document.getElementById("med_pais").value;
-		
-		alert(docname);
-		
-	/*	navigator.notification.alert(
-            'datos: ' + docname + ' ' + doctlf + ' ' + doccentro + ' ' + docmail + ' ' + docpais , 
-            'MIP',            
-            'Aceptar'                  
-        );*/
-		 
 
-    }
-	
 	function validate() {
 		navigator.notification.confirm(
         'Debe registrar sus datos, desea hacerlo ahora?', 

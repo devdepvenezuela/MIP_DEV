@@ -78,10 +78,10 @@ input[type=button] {
 <form>
 		<fieldset>
 			<label for="med_nombre">Nombre:</label><br />
-			<input type="text" id="pac_nombre" placeholder="Ingrese su nombre" />
+			<input type="text" id="med_nombre" placeholder="Ingrese su nombre" />
             
             <label for="med_ci">Cedula:</label><br />
-			<input type="text" id="pac_ci" placeholder="Ingrese su cedula" />
+			<input type="text" id="med_ci" placeholder="Ingrese su cedula" />
             
             <label for="med_telf">Telefono:</label><br />
 			<input type="text" id="med_telf" placeholder="Ingrese su telefono" />
@@ -102,6 +102,28 @@ input[type=button] {
 			<input onclick="save()" type="button" value="Guardar" />		
             </fieldset>
 	</form>	
+    
+    <script type="text/javascript">
+    
+    function save() {
+		var docname = document.getElementById("med_nombre").value;
+		var docci = document.getElementById("med_ci").value;
+		var doctlf = document.getElementById("med_telf").value;
+		var doccentro = document.getElementById("med_centro").value;
+		var docmail = document.getElementById("med_email").value;
+		var docpais = document.getElementById("med_pais").value;
+		
+		alert(docname);
+		
+	/*	navigator.notification.alert(
+            'datos: ' + docname + ' ' + doctlf + ' ' + doccentro + ' ' + docmail + ' ' + docpais , 
+            'MIP',            
+            'Aceptar'                  
+        );*/
+		 
+
+    }
+    </script>
 </div>    
 	
 
