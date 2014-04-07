@@ -52,7 +52,20 @@
         );
 
     }
+	
+    function save() {
+		var docname = document.getElementById("med_nombre").value;
+		localStorage.setItem("name", docname);
+		alert(docname);
+		
+	/*	navigator.notification.alert(
+            'datos: ' + docname + ' ' + doctlf + ' ' + doccentro + ' ' + docmail + ' ' + docpais , 
+            'MIP',            
+            'Aceptar'                  
+        );*/
+		 
 
+    }
 
     </script>
     </head>
