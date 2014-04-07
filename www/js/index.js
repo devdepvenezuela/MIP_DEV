@@ -109,6 +109,22 @@ function menu(opcion){
 		myScroll.refresh();
 		myScroll.scrollTo(0,0);
 		
+		if(opcion == '2')
+		{
+			var docname = document.getElementById("med_nombre");
+			var docci = document.getElementById("med_ci");
+			var doctelf = document.getElementById("med_telf");
+			var doccentro = document.getElementById("med_centro");
+			var docemail = document.getElementById("med_email");
+			var docpais = document.getElementById("med_pais");
+				docname.value = localStorage.getItem("name");
+				docci.value = localStorage.getItem("ci");
+				doctelf.value = localStorage.getItem("telf");
+				doccentro.value = localStorage.getItem("centro");
+				docemail.value = localStorage.getItem("email");
+				docpais.value = localStorage.getItem("pais");
+			}
+		
 		// A?adimos las clases necesarias para que la capa cuerpo se mueva al centro de nuestra app y muestre el contenido
 		cuerpo.className = 'page transition center';
 		estado="cuerpo";
