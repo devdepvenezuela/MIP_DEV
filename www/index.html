@@ -44,12 +44,30 @@
     }
 
 	function validate() {
+		var name = localStorage.getItem("name");
+		var ci = localStorage.getItem("ci");
+		var telf = localStorage.getItem("telf");
+		var centro = localStorage.getItem("centro");
+		var email = localStorage.getItem("email");
+		var pais = localStorage.getItem("pais");
+		if(name == '' && ci == '' && telf == '' && centro == '' && email == '' && pais == '')
+		{
 		navigator.notification.confirm(
         'Debe registrar sus datos, desea hacerlo ahora?', 
          onConfirm,            
         'MIP',           
         'Si,Ahora no'        
         );
+		}
+		else
+		{
+			navigator.notification.alert(
+            'Hola ' + name ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
+			}
 
     }
 	
