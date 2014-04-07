@@ -117,12 +117,24 @@ function menu(opcion){
 			var doccentro = document.getElementById("med_centro");
 			var docemail = document.getElementById("med_email");
 			var docpais = document.getElementById("med_pais");
-				docname.value = localStorage.getItem("name");
-				docci.value = localStorage.getItem("ci");
-				doctelf.value = localStorage.getItem("telf");
-				doccentro.value = localStorage.getItem("centro");
-				docemail.value = localStorage.getItem("email");
-				docpais.value = localStorage.getItem("pais");
+			var name = localStorage.getItem("nombre");
+			var ci = localStorage.getItem("ci");
+			var telf = localStorage.getItem("telf");
+			var centro = localStorage.getItem("centro");
+			var email = localStorage.getItem("email");
+			var pais = localStorage.getItem("pais");
+			if (name != null)
+				{docname.value = name; }
+			if (ci != null)
+				{docci.value = ci; }
+			if (telf != null)
+				{doctelf.value = telf; }
+			if (centro != null)
+				{doccentro.value = centro;}
+			if (email != null)
+				{docemail.value = email;} 
+			if (pais != null)
+				{docpais.value = pais; }
 			}
 		
 		// A?adimos las clases necesarias para que la capa cuerpo se mueva al centro de nuestra app y muestre el contenido
