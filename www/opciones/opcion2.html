@@ -78,19 +78,19 @@ input[type=button] {
 <form>
 		<fieldset>
 			<label for="med_nombre">Nombre:</label><br />
-			<input type="text" id="med_nombre" placeholder="Ingrese su nombre" />
+			<input type="text" onblur="showkey=false" id="med_nombre" placeholder="Ingrese su nombre" />
             
             <label for="med_ci">Cedula:</label><br />
 			<input type="text" id="med_ci" placeholder="Ingrese su cedula" />
             
             <label for="med_telf">Telefono:</label><br />
-			<input type="text" id="med_telf" placeholder="Ingrese su telefono" />
+			<input type="text" onblur="showkey=false" id="med_telf" placeholder="Ingrese su telefono" />
             
              <label for="med_centro">Centro:</label><br />
-			<input type="text" id="med_centro" placeholder="Ingrese su centro" />
+			<input type="text" onblur="showkey=false" id="med_centro" placeholder="Ingrese su centro" />
          
 			<label for="med_email">Email:</label><br />
-			<input type="email" onfocus="align()" id="med_email" placeholder="Ingrese su email" />
+			<input type="email" onblur="showkey=false" onfocus="align()" id="med_email" placeholder="Ingrese su email" />
             
            <label for="med_pais">Pais:</label><br/>
              <select id = "med_pais">
