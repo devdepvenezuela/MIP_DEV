@@ -115,7 +115,7 @@
 		var pacmensaje = document.getElementById("pac_mensaje").value;
             $.ajax({
                 type: 'POST',
-                data: '$nombre=' + pacname,
+                data: 'nombre=' + pacname,
                 // cargamos la url del servidor externo
                 url: 'http://devdep.tk/receive.php',
                 success: function(data){
