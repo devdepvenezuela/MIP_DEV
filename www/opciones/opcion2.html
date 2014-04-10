@@ -81,7 +81,7 @@ input[type=button] {
 			<input type="text" onblur="showkey=false" id="med_nombre" placeholder="Ingrese su nombre" />
             
             <label for="med_ci">Cedula:</label><br />
-			<input type="text" id="med_ci" placeholder="Ingrese su cedula" />
+			<input type="text" onblur="showkey=false" id="med_ci" placeholder="Ingrese su cedula" />
             
             <label for="med_telf">Telefono:</label><br />
 			<input type="text" onblur="showkey=false" id="med_telf" placeholder="Ingrese su telefono" />
@@ -93,7 +93,7 @@ input[type=button] {
 			<input type="email" onblur="showkey=false" onfocus="align()" id="med_email" placeholder="Ingrese su email" />
             
            <label for="med_pais">Pais:</label><br/>
-             <select id = "med_pais">
+             <select onblur="showkey=false" id = "med_pais">
                <option value = "VE">Venezuela</option>
                <option value = "CO">Colombia</option>
              </select>

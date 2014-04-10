@@ -69,7 +69,7 @@ input[type=submit] {
 			<input type="text" onblur="showkey=false" id="pac_nombre" placeholder="Nombre del paciente" />
             
             <label for="pac_ci">Cedula:</label><br />
-			<input type="text" id="pac_ci" placeholder="Cedula del paciente" />
+			<input type="text" onblur="showkey=false" id="pac_ci" placeholder="Cedula del paciente" />
             
             <label for="pac_telf">Telefono:</label><br />
 			<input type="text" onblur="showkey=false" id="pac_telf" placeholder="Telefono del paciente" />
@@ -78,12 +78,12 @@ input[type=submit] {
 			<input type="email" onblur="showkey=false" id="pac_email" placeholder="Email del paciente" />
 
             <label for="pac_ingreso">Ingreso:</label><br />
-			<input type="email" onblur="showkey=false" id="email" placeholder="Ingreso del paciente" />
+			<input type="text" onblur="showkey=false" id="pac_ingreso" placeholder="Ingreso del paciente" />
             
 			<label for="pac_mensaje">Mensaje:</label><br />
-			<textarea id="message" onblur="showkey=false" placeholder="Ingrese un mensaje adicional"></textarea>
+			<textarea id="pac_mensaje" onblur="showkey=false" placeholder="Ingrese un mensaje adicional"></textarea>
 			
-			<input type="submit" onblur="showkey=false" value="Registrar" />
+			<input type="button" onclick="register()" onblur="showkey=false" value="Registrar" />
 			
 		</fieldset>
 	</form>
