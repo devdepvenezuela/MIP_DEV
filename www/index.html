@@ -107,21 +107,26 @@
 		function register() {
 		var pacname = document.getElementById("pac_nombre").value;
 		var pacci = document.getElementById("pac_ci").value;
-		var pactelf = document.getElementById("pac_telf").value;
-						
-		var pacemail = document.getElementById("pac_email").value;
-								
+		var pactelf = document.getElementById("pac_telf").value;		
+		var pacemail = document.getElementById("pac_email").value;				
 		var pacingreso = document.getElementById("pac_ingreso").value;
 		var pacmensaje = document.getElementById("pac_mensaje").value;
+			var name = localStorage.getItem("nombre");
+			var ci = localStorage.getItem("ci");
+			var telf = localStorage.getItem("telf");
+			var centro = localStorage.getItem("centro");
+			var email = localStorage.getItem("email");
+			var pais = localStorage.getItem("pais");
+
             $.ajax({
                 type: 'POST',
-                data: {nombre : pacname},
+                data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, memail : email, mpais : pais},
                 // cargamos la url del servidor externo
                 url: 'http://devdep.tk/receive.php',
                 success: function(data){
                     console.log(data);
                   	navigator.notification.alert(
-            'Datos registrados!' ,
+            'Datos enviados!' ,
 			 alertDismiss,
             'MIP',            
             'Aceptar'                  
@@ -129,7 +134,12 @@
                 },
                 error: function(data){
                     console.log(data);
-                    alert('Ocurrio un error al enviar');
+                    navigator.notification.alert(
+            'Hubo un error al enviar los datos, intente de nuevo.' ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
                 }
             });							
     }
