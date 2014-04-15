@@ -136,6 +136,12 @@ function menu(opcion){
 			if (pais != null)
 				{docpais.value = pais; }
 			}
+			
+			if(opcion == '1')
+		{
+			var btnreg = document.getElementById("btnregister");
+			btnreg.disabled = true;
+		}
 		
 		// A?adimos las clases necesarias para que la capa cuerpo se mueva al centro de nuestra app y muestre el contenido
 		cuerpo.className = 'page transition center';
