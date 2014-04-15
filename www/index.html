@@ -89,10 +89,10 @@
 	{
 		var chk = $("#chkterminos").is(":checked");
 		var btn = document.getElementById("btnregister");
-		if(chk == true || chk == false)
-		{alert('es verdad');}
+		if(chk == true)
+		{btn.disabled = false;}
 		else
-		{alert('es mentira');}
+		{btn.disabled = true;}
 		}
 		
 		
