@@ -87,12 +87,12 @@
 		
 		function terminos()
 	{
-		var chk = document.getElementById("chkterminos").value;
+		var chk = $("#chkterminos").is(":checked");
 		var btn = document.getElementById("btnregister");
-		if(chk == true)
-		{btn.disabled = false;}
+		if(chk == true || chk == false)
+		{alert('es verdad');}
 		else
-		{btn.disabled == true;}
+		{alert('es mentira');}
 		}
 		
 		
