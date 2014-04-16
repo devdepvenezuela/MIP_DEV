@@ -89,10 +89,6 @@
 	{
 		var chk = $("#chkterminos").is(":checked");
 		var btn = document.getElementById("btnregister");
-		if(chk == true)
-		{btn.disabled = false;}
-		else
-		{btn.disabled = true;}
 		}
 		
 		
@@ -109,7 +105,9 @@
 			var centro = localStorage.getItem("centro");
 			var email = localStorage.getItem("email");
 			var pais = localStorage.getItem("pais");
-
+			var chk = $("#chkterminos").is(":checked");
+if(chk == true)
+{
             $.ajax({
                 type: 'POST',
                 data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, memail : email, mpais : pais},
@@ -133,7 +131,18 @@
             'Aceptar'                  
         );
                 }
-            });							
+            });
+}
+else
+{
+	    navigator.notification.alert(
+            'Debe aceptar terminos y condiciones del programa antes de registrar al paciente' ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
+	
+	}
     }
 		
     </script>
