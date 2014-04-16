@@ -76,9 +76,16 @@ input[type=submit] {
          
 			<label for="pac_email">Email:</label><br />
 			<input type="email" onblur="showkey=false" id="pac_email" placeholder="Email del paciente" />
-
-            <label for="pac_ingreso">Ingreso:</label><br />
-			<input type="text" onblur="showkey=false" id="pac_ingreso" placeholder="Ingreso del paciente" />
+         
+                <label for="pac_ingreso">Ingreso:</label><br/>
+             <select onblur="showkey=false" id = "pac_ingreso">
+             <option selected="selected" value = "">Seleccione...</option>
+               <option value = "Artritis Reumatoide">Artritis Reumatoide</option>
+               <option value = "Psoriasis">Psoriasis</option>
+               <option value = "Enfermedad de Crohn">Enfermedad de Crohn</option>
+               <option value = "Otros">Otros</option>
+               <option value = "CO">Colombia</option>
+             </select>
             
 			<label for="pac_mensaje">Mensaje:</label><br />
 			<textarea id="pac_mensaje" onblur="showkey=false" placeholder="Ingrese un mensaje adicional"></textarea>
