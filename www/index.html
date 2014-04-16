@@ -73,6 +73,7 @@
             'MIP',            
             'Aceptar'                  
         );
+		menu('0');
     }
 	
 	function align()
@@ -84,13 +85,7 @@
 		function alertDismiss()
 	{
 		}
-		
-		function terminos()
-	{
-		var chk = $("#chkterminos").is(":checked");
-		var btn = document.getElementById("btnregister");
-		}
-		
+				
 		
 		function register() {
 		var pacname = document.getElementById("pac_nombre").value;
@@ -121,6 +116,7 @@ if(chk == true)
             'MIP',            
             'Aceptar'                  
         );
+		menu('0');
                 },
                 error: function(data){
                     console.log(data);

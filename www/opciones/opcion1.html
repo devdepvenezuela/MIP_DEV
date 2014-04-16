@@ -101,7 +101,7 @@ select {
 			<textarea id="pac_mensaje" onblur="showkey=false" placeholder="Ingrese un mensaje adicional"></textarea>
 			
                  <label for="pac_mensaje">Acepta el paciente los terminos y condiciones del programa?</label><br />
-                    <input type="checkbox" onchange="terminos()" id="chkterminos" />
+                    <input onblur="showkey=false" type="checkbox" id="chkterminos" />
                     
 			<input id="btnregister" type="button" onclick="register()" onblur="showkey=false" value="Registrar" />
     
