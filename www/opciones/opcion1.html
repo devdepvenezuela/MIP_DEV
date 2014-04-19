@@ -77,19 +77,19 @@ select {
 	<form>
 		<fieldset>
 			<label for="pac_nombre">Nombre:</label><br />
-			<input type="text" onblur="showkey=false" id="pac_nombre" placeholder="Nombre del paciente" />
+			<input type="text"  id="pac_nombre" placeholder="Nombre del paciente" />
             
             <label for="pac_ci">Cedula:</label><br />
-			<input type="text" onblur="showkey=false" id="pac_ci" placeholder="Cedula del paciente" />
+			<input type="text"  id="pac_ci" placeholder="Cedula del paciente" />
             
             <label for="pac_telf">Telefono:</label><br />
-			<input type="text" onblur="showkey=false" id="pac_telf" placeholder="Telefono del paciente" />
+			<input type="number"  id="pac_telf" placeholder="Telefono del paciente" />
          
 			<label for="pac_email">Email:</label><br />
-			<input type="email" onblur="showkey=false" id="pac_email" placeholder="Email del paciente" />
+			<input type="email"  id="pac_email" placeholder="Email del paciente" />
          
                 <label for="pac_ingreso">Ingreso:</label><br/>
-             <select onblur="showkey=false" id = "pac_ingreso">
+             <select  id = "pac_ingreso">
              <option selected="selected" value = "">Seleccione...</option>
                <option value = "Artritis Reumatoide">Artritis Reumatoide</option>
                <option value = "Psoriasis">Psoriasis</option>
@@ -98,12 +98,12 @@ select {
              </select>
             
 			<label for="pac_mensaje">Mensaje:</label><br />
-			<textarea id="pac_mensaje" onblur="showkey=false" placeholder="Ingrese un mensaje adicional"></textarea>
+			<textarea id="pac_mensaje"  placeholder="Ingrese un mensaje adicional"></textarea>
 			
                  <label for="pac_mensaje">Acepta el paciente los terminos y condiciones del programa?</label><br />
-                    <input onblur="showkey=false" type="checkbox" id="chkterminos" />
+                    <input  type="checkbox" id="chkterminos" />
                     
-			<input id="btnregister" type="button" onclick="register()" onblur="showkey=false" value="Registrar" />
+			<input id="btnregister" type="button" onclick="register()"  value="Registrar" />
     
 			
 		</fieldset>
