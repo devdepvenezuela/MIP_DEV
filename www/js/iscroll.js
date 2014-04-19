@@ -126,14 +126,7 @@ var m = Math,
 
 			// Events
 			onRefresh: null,
-			onBeforeScrollStart: function (e) {
-                var nodeType = e.explicitOriginalTarget ? e.explicitOriginalTarget.nodeName.toLowerCase():(e.target ? e.target.nodeName.toLowerCase():'');
-                
-                if(nodeType !='select' && nodeType !='option' && nodeType !='input' && nodeType!='textarea' && !showkey) {
-                     e.preventDefault();    //prevents showing keyboard - scrolling
-                }//otherwise, show keyboard, do default
-                if(!showkey) showkey = true;
-            },
+			onBeforeScrollStart: function (e) { e.preventDefault(); },
 			onScrollStart: null,
 			onBeforeScrollMove: null,
 			onScrollMove: null,

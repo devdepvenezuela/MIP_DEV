@@ -37,17 +37,39 @@ var app = {
 		document.getElementById("contenidoMenu").innerHTML=xhReq.responseText;
 		
 		// Creamos los 2 scroll mediante el plugin iscroll, uno para el men? principal y otro para el cuerpo
-		myScroll = new iScroll('wrapper', {
-useTransform: false,
-onBeforeScrollStart: function (e) {
-var target = e.target;
-while (target.nodeType != 1) target = target.parentNode;
 
-if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA')
-e.preventDefault();
-}
-});
-		myScrollMenu = new iScroll('wrapperMenu', { hideScrollbar: true });
+myScroll = new iScroll('wrapper', {
+                 hideScrollbar: true,
+				onBeforeScrollStart: function (e) {
+            var target = e.target;
+            while (target.nodeType != 1) target = target.parentNode;
+
+            if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
+                e.preventDefault();
+            } else {
+                $(target).bind('blur', function(){
+                    window.scrollTo(0,0);
+                    myScroll.refresh();
+                });
+            }
+        }
+    });
+		myScrollMenu = new iScroll('wrapperMenu', {
+                 hideScrollbar: true,
+				 onBeforeScrollStart: function (e) {
+            var target = e.target;
+            while (target.nodeType != 1) target = target.parentNode;
+
+            if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
+                e.preventDefault();
+            } else {
+                $(target).bind('blur', function(){
+                    window.scrollTo(0,0);
+                    myScrollMenu.refresh();
+                });
+            }
+        }
+    });
 	
         this.bindEvents();
     },
