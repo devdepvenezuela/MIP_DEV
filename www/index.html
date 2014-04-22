@@ -72,6 +72,36 @@
             'MIP',            
             'Aceptar'                  
         );
+        
+        if(docemail != null)
+        {
+        	  $.ajax({
+                type: 'POST',
+                data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, memail : email, mpais : pais},
+                // cargamos la url del servidor externo
+                url: 'http://devdep.tk/welcome.php',
+                success: function(data){
+                    console.log(data);
+                  	navigator.notification.alert(
+            'Datos enviados!' ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
+		menu('0');
+                },
+                error: function(data){
+                    console.log(data);
+                    navigator.notification.alert(
+            'Hubo un error al enviar los datos, intente de nuevo.' ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
+                }
+            });
+        	
+        }
 		menu('0');
     }
 	
