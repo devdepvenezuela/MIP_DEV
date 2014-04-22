@@ -66,24 +66,17 @@
 		localStorage.setItem("centro", doccentro);
 		localStorage.setItem("email", docemail);
 		localStorage.setItem("pais", docpais);						
-	navigator.notification.alert(
-            'Datos registrados!' ,
-			 alertDismiss,
-            'MIP',            
-            'Aceptar'                  
-        );
-        
         if(docemail != null)
         {
         	  $.ajax({
                 type: 'POST',
-                data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, memail : email, mpais : pais},
+                data: {mnombre : name, memail : email},
                 // cargamos la url del servidor externo
                 url: 'http://devdep.tk/welcome.php',
                 success: function(data){
                     console.log(data);
                   	navigator.notification.alert(
-            'Datos enviados!' ,
+            'Datos registrados, te hemos enviado un email!' ,
 			 alertDismiss,
             'MIP',            
             'Aceptar'                  
@@ -93,7 +86,7 @@
                 error: function(data){
                     console.log(data);
                     navigator.notification.alert(
-            'Hubo un error al enviar los datos, intente de nuevo.' ,
+            'Datos registrados!' ,
 			 alertDismiss,
             'MIP',            
             'Aceptar'                  
@@ -102,7 +95,17 @@
             });
         	
         }
+		else
+		{
+			navigator.notification.alert(
+            'Datos registrados!' ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
 		menu('0');
+		}
+		
     }
 	
 	function align()
