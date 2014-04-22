@@ -46,10 +46,9 @@ myScroll = new iScroll('wrapper', {
 
             if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
                 e.preventDefault();
+                            	e.stopPropagation();
             } else {
                 $(target).bind('blur', function(){
-                	e.preventDefault();
-                	e.stopPropagation();
                     window.scrollTo(0,0);
                     myScroll.refresh();
                 });
