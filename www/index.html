@@ -8,7 +8,11 @@
     <script type="text/javascript" charset="utf-8">
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-		validate();	<!--document.getElementById("crear").addEventListener("click", save(),false);--> 
+		validate();
+		$('input').live('focus', function(e) {
+    e.preventDefault(); e.stopPropagation();
+    window.scrollTo(0,0); //the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
+});
     }
 	
     function onConfirm(buttonIndex) {
