@@ -5,7 +5,7 @@
 body {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:14px;
-    height:99.9%;
+    height:99.99%;
     width:100%;
     padding:0;
 	margin:0;
@@ -63,7 +63,7 @@ a {
 	background:#fff;
 	position:absolute;
 	width: 100%;
-	height:100%;
+	height:99.99%;
 }
 
 #cuerpo h1{
@@ -88,14 +88,14 @@ a {
 	background:url(../img/fondo.jpg) repeat;
 	position:absolute;
 	width: 80%;
-	height: 100%;
+	height: 99.99%;
 }
 
 #wrapperMenu {
 	position:absolute; z-index:1;
 	top:0;
 	bottom:0; left:0;
-	height:100%;
+	height:99.99%;
 	width:100%;
 	overflow:auto;
 }
@@ -104,7 +104,7 @@ a {
 	width:5px;
 	float:left;
 	left:0px;
-	height:100%;
+	height:99.99%;
 	margin-right:10px
 }
 
@@ -200,7 +200,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 99.99%;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
