@@ -48,6 +48,8 @@ myScroll = new iScroll('wrapper', {
                 e.preventDefault();
             } else {
                 $(target).bind('blur', function(){
+                	e.preventDefault();
+                	e.stopPropagation();
                     window.scrollTo(0,0);
                     myScroll.refresh();
                 });
