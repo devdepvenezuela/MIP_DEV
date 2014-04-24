@@ -69,14 +69,52 @@
 		localStorage.setItem("especialidad", doccentro);
 		localStorage.setItem("email", docemail);
 		localStorage.setItem("pais", docpais);						
-	navigator.notification.alert(
+      
+	          if(docemail != null && docemail != "" )
+        {
+        	  $.ajax({
+                type: 'POST',
+                data: {mnombre : name, memail : docemail},
+                // cargamos la url del servidor externo
+                url: 'http://devdep.tk/welcome.php',
+                success: function(data){
+                    console.log(data);
+                  	navigator.notification.alert(
+            'Datos registrados, te hemos enviado un email!' ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
+                },
+                error: function(data){
+                    console.log(data);
+                    navigator.notification.alert(
             'Datos registrados!' ,
 			 alertDismiss,
             'MIP',            
             'Aceptar'                  
         );
+                }
+            });
+        	
+        }
+				else
+		{
+			navigator.notification.alert(
+            'Datos registrados!' ,
+			 alertDismiss,
+            'MIP',            
+            'Aceptar'                  
+        );
+		
+		}
 		menu('0');
     }
+
+  
+
+	
+	
 	
 	function align()
 	{
