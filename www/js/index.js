@@ -147,6 +147,7 @@ function menu(opcion){
 			var ci = localStorage.getItem("ci");
 			var telf = localStorage.getItem("telf");
 			var centro = localStorage.getItem("centro");
+			var especialidad = localStorage.getItem("especialidad");
 			var email = localStorage.getItem("email");
 			var pais = localStorage.getItem("pais");
 			if (name != null)
@@ -157,7 +158,7 @@ function menu(opcion){
 				{doctelf.value = telf; }
 			if (centro != null)
 				{doccentro.value = centro;}
-				if (especialidad != null)
+			if (especialidad != null)
 				{docespecialidad.value = especialidad;}
 			if (email != null)
 				{docemail.value = email;} 
