@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+ <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no ">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         
         <title>Demo Menu</title>
-        <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
-    
-    	/*	$('input').live('focus', function(e) {
-    e.preventDefault(); e.stopPropagation();
-    window.scrollTo(0,0);
-    alert(e.target.id);//the second 0 marks the Y scroll pos. Setting this to i.e. 100 will push the screen up by 100px. 
-});
-$( "#pac_email" ).focus(function() {
-  alert( "Handler for .focus() called." );
-});*/
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-		validate();
+		validate();	<!--document.getElementById("crear").addEventListener("click", save(),false);--> 
     }
 	
     function onConfirm(buttonIndex) {
@@ -67,6 +57,7 @@ $( "#pac_email" ).focus(function() {
 		var docci = document.getElementById("med_ci").value;
 				var doctelf = document.getElementById("med_telf").value;
 						var doccentro = document.getElementById("med_centro").value;
+						var docespecialidad = document.getElementById("med_especialidad").value;
 								var docemail = document.getElementById("med_email").value;
 										var docpais = document.getElementById("med_pais").value;
 						
@@ -74,48 +65,16 @@ $( "#pac_email" ).focus(function() {
 		localStorage.setItem("ci", docci);
 		localStorage.setItem("telf", doctelf);				
 		localStorage.setItem("centro", doccentro);
+		localStorage.setItem("especialidad", doccentro);
 		localStorage.setItem("email", docemail);
 		localStorage.setItem("pais", docpais);						
-        if(docemail != null ||  docemail != "")
-        {
-        	  $.ajax({
-                type: 'POST',
-                data: {mnombre : docname, memail : docemail},
-                // cargamos la url del servidor externo
-                url: 'http://devdep.tk/welcome.php',
-                success: function(data){
-                    console.log(data);
-                  	navigator.notification.alert(
-            'Datos registrados, te hemos enviado un email!' ,
-			 alertDismiss,
-            'MIP',            
-            'Aceptar'                  
-        );
-		menu('0');
-                },
-                error: function(data){
-                    console.log(data);
-                    navigator.notification.alert(
-            'Datos registrados!' ,
-			 alertDismiss,
-            'MIP',            
-            'Aceptar'                  
-        );
-                }
-            });
-        	
-        }
-		else
-		{
-			navigator.notification.alert(
+	navigator.notification.alert(
             'Datos registrados!' ,
 			 alertDismiss,
             'MIP',            
             'Aceptar'                  
         );
 		menu('0');
-		}
-		
     }
 	
 	function align()
@@ -140,6 +99,7 @@ $( "#pac_email" ).focus(function() {
 			var ci = localStorage.getItem("ci");
 			var telf = localStorage.getItem("telf");
 			var centro = localStorage.getItem("centro");
+			var especialidad = localStorage.getItem("especialidad");
 			var email = localStorage.getItem("email");
 			var pais = localStorage.getItem("pais");
 			var chk = $("#chkterminos").is(":checked");
@@ -147,7 +107,7 @@ if(chk == true)
 {
             $.ajax({
                 type: 'POST',
-                data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, memail : email, mpais : pais},
+                data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, mespecialidad : especialidad, memail : email, mpais : pais},
                 // cargamos la url del servidor externo
                 url: 'http://devdep.tk/receive.php',
                 success: function(data){
@@ -201,6 +161,8 @@ else
     </div> 
   </div> 
 </div>
+        <!--<script type="text/javascript" src="phonegap.js"></script>-->
+        <script src="js/cordova.js"></script>
 		<script src="js/fastclick.js"></script>
 		<script src="js/iscroll.js"></script>
 		<script src="js/index.js"></script>

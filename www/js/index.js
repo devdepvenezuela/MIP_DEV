@@ -140,6 +140,7 @@ function menu(opcion){
 			var docci = document.getElementById("med_ci");
 			var doctelf = document.getElementById("med_telf");
 			var doccentro = document.getElementById("med_centro");
+			var docespecialidad = document.getElementById("med_especialidad");
 			var docemail = document.getElementById("med_email");
 			var docpais = document.getElementById("med_pais");
 			var name = localStorage.getItem("nombre");
@@ -156,6 +157,8 @@ function menu(opcion){
 				{doctelf.value = telf; }
 			if (centro != null)
 				{doccentro.value = centro;}
+				if (especialidad != null)
+				{docespecialidad.value = especialidad;}
 			if (email != null)
 				{docemail.value = email;} 
 			if (pais != null)
