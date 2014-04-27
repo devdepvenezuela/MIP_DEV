@@ -136,7 +136,6 @@ function menu(opcion){
 		document.body.style.height = screen.availHeight + 'px';*/
 		myScroll.refresh();
 		myScroll.scrollTo(0,0);
-		document.body.style.height = screen.availHeight + 'px';
 		if(opcion == '2')
 		{
 			var docname = document.getElementById("med_nombre");
