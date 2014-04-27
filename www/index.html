@@ -10,10 +10,10 @@
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 		validate();	
-			$(document).on('focus','input[type=text]', function () {
-        var self = $(this);
-        alert('focus');
-    })
+		$('input[type=text]').bind('touchstart click', function(){
+    $(this).focus();
+	alert('hola');
+});
     }
 	
     function onConfirm(buttonIndex) {
@@ -123,7 +123,6 @@
 	function align()
 	{
 		myScroll.scrollTo(0,0);
-		window.scrollTo(0,0);
 		}
 		
 		

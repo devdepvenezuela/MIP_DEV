@@ -53,7 +53,6 @@ myScroll = new iScroll('wrapper', {
             }
         }
     });
-	setTimeout(function () { myScroll.refresh(); }, 200);
 		myScrollMenu = new iScroll('wrapperMenu', {
                  hideScrollbar: true,
 				 onBeforeScrollStart: function (e) {
