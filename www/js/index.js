@@ -48,12 +48,12 @@ myScroll = new iScroll('wrapper', {
             } else {
                 $(target).bind('blur', function(){
                     window.scrollTo(0,0);
-                    myScroll.refresh();
                 });
 			
             }
         }
     });
+	setTimeout(function () { myScroll.refresh(); }, 200);
 		myScrollMenu = new iScroll('wrapperMenu', {
                  hideScrollbar: true,
 				 onBeforeScrollStart: function (e) {
