@@ -9,8 +9,10 @@
                 <script type="text/javascript">
 
 var myScroll;
+var wrapper;
+wrapper = document.getElementById("wrapper");
 function iScrollLoad() {
-    myScroll = new iScroll(document.getElementById("wrapper"));
+    myScroll = new iScroll('wrapper');
     enableFormsInIscroll();
 }
 
