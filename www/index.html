@@ -6,28 +6,6 @@
         
         <title>Demo Menu</title>
         <script type="text/javascript" src="phonegap.js"></script>
-                <script type="text/javascript">
-
-var myScroll;
-var wrapper;
-wrapper = document.getElementById("wrapper");
-function iScrollLoad() {
-    myScroll = new iScroll('wrapper');
-    enableFormsInIscroll();
-}
-
-function enableFormsInIscroll(){
-  [].slice.call(document.querySelectorAll('input, select, button, textarea')).forEach(function(el){
-    el.addEventListener(('ontouchstart' in window)?'touchstart':'mousedown', function(e){
-      e.stopPropagation();
-    })
-  })
-}
-
-document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-document.addEventListener('DOMContentLoaded', function () { setTimeout(iScrollLoad, 200); }, false);
-
-</script>
     <script type="text/javascript" charset="utf-8">
 	
 	
