@@ -129,11 +129,11 @@ function menu(opcion){
 		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
 		
 		// Refrescamos el elemento iscroll seg?n el contenido ya a?adido mediante ajax, y hacemos que se desplace al top
-		myScroll.refresh();
+		/*myScroll.refresh();
 		myScroll.scrollTo(0,0);
 		myScrollMenu.refresh();
 		myScrollMenu.scrollTo(0,0);
-		document.body.style.height = screen.availHeight + 'px';
+		document.body.style.height = screen.availHeight + 'px';*/
 		if(opcion == '2')
 		{
 			var docname = document.getElementById("med_nombre");
