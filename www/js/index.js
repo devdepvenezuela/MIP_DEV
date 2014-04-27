@@ -45,15 +45,15 @@ myScroll = new iScroll('wrapper', {
             while (target.nodeType != 1) target = target.parentNode;
 
             if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
-                e.preventDefault();
-                            	e.stopPropagation();
-            } else {
+               // e.preventDefault();
+                e.stopPropagation();
+            } /*else {
                 $(target).bind('blur', function(){
                     window.scrollTo(0,0);
                     myScroll.refresh();
                 });
             }
-        }
+        }*/
     });
 		myScrollMenu = new iScroll('wrapperMenu', {
                  hideScrollbar: true,
@@ -64,12 +64,12 @@ myScroll = new iScroll('wrapper', {
             if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
                 e.preventDefault();
 				e.stopProgation();
-            } /*else {
+            } else {
                 $(target).bind('blur', function(){
                     window.scrollTo(0,0);
                     myScrollMenu.refresh();
                 });
-            }*/
+            }
         }
     });
 	
