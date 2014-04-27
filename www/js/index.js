@@ -38,7 +38,7 @@ var app = {
 		
 		// Creamos los 2 scroll mediante el plugin iscroll, uno para el men? principal y otro para el cuerpo
 
-myScroll = new iScroll('wrapper', {
+/*myScroll = new iScroll('wrapper', {
                  hideScrollbar: true,
 				onBeforeScrollStart: function (e) {
             var target = e.target;
@@ -54,7 +54,7 @@ myScroll = new iScroll('wrapper', {
 			
             }
         }
-    });
+    });*/
 		myScrollMenu = new iScroll('wrapperMenu', {
                  hideScrollbar: true,
 				 onBeforeScrollStart: function (e) {
