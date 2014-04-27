@@ -12,9 +12,10 @@
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
 		validate();	
-		 $('#pac_mensaje').on('focus', function() {
-    alert("hola");
-}); 
+			$(document).on('focus','input[type=text]', function () {
+        var self = $(this);
+        alert(self);
+    })
     }
 	
     function onConfirm(buttonIndex) {
