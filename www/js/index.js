@@ -41,7 +41,7 @@ var app = {
 myScroll = new iScroll('wrapper', {
                  hideScrollbar: true,
 				onBeforeScrollStart: function (e) {
-            var target = e.target;
+     /*       var target = e.target;
             while (target.nodeType != 1) target = target.parentNode;
 
             if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
@@ -52,7 +52,7 @@ myScroll = new iScroll('wrapper', {
                     myScroll.refresh();
                 });
 			
-            }
+            }*/
         }
     });
 		myScrollMenu = new iScroll('wrapperMenu', {
