@@ -63,12 +63,13 @@ myScroll = new iScroll('wrapper', {
 
             if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
                 e.preventDefault();
-            } else {
+				e.stopProgation();
+            } /*else {
                 $(target).bind('blur', function(){
                     window.scrollTo(0,0);
                     myScrollMenu.refresh();
                 });
-            }
+            }*/
         }
     });
 	
@@ -165,8 +166,10 @@ function menu(opcion){
 			if (email != null)
 				{docemail.value = email;} 
 			if (pais != null)
-				{docpais.value = pais; }
+				{docpais.value = pais; }	
 			}
+			
+				
 		
 		// A?adimos las clases necesarias para que la capa cuerpo se mueva al centro de nuestra app y muestre el contenido
 		cuerpo.className = 'page transition center';
