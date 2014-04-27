@@ -52,8 +52,8 @@ myScroll = new iScroll('wrapper', {
                     window.scrollTo(0,0);
                     myScroll.refresh();
                 });
-            }
-        }*/
+            }*/
+        }
     });
 		myScrollMenu = new iScroll('wrapperMenu', {
                  hideScrollbar: true,
