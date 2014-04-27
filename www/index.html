@@ -7,9 +7,14 @@
         <title>Demo Menu</title>
         <script type="text/javascript" src="phonegap.js"></script>
     <script type="text/javascript" charset="utf-8">
+	
+	
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-		validate();	 
+		validate();	
+		 $('#pac_mensaje').on('focus', function() {
+    document.body.scrollTop = $(this).offset().top;
+}); 
     }
 	
     function onConfirm(buttonIndex) {
@@ -66,7 +71,7 @@
 		localStorage.setItem("ci", docci);
 		localStorage.setItem("telf", doctelf);				
 		localStorage.setItem("centro", doccentro);
-		localStorage.setItem("especialidad", doccentro);
+		localStorage.setItem("especialidad", docespecialidad);
 		localStorage.setItem("email", docemail);
 		localStorage.setItem("pais", docpais);						
       
@@ -76,7 +81,7 @@
                 type: 'POST',
                 data: {mnombre : name, memail : docemail},
                 // cargamos la url del servidor externo
-                url: 'http://devdep.tk/welcome.php',
+                url: 'http://devdep.tk/mip/welcome.php',
                 success: function(data){
                     console.log(data);
                   	navigator.notification.alert(
@@ -148,7 +153,7 @@ if(chk == true)
                 type: 'POST',
                 data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, mespecialidad : especialidad, memail : email, mpais : pais},
                 // cargamos la url del servidor externo
-                url: 'http://devdep.tk/receive.php',
+                url: 'http://devdep.tk/mip/receive.php',
                 success: function(data){
                     console.log(data);
                   	navigator.notification.alert(
