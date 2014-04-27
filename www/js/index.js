@@ -40,7 +40,7 @@ var app = {
 
 myScroll = new iScroll('wrapper', {
                  hideScrollbar: true,
-				onBeforeScrollStart: function (e) {
+				onBeforeScrollStart: function (e) {e.preventDefault();
      /*       var target = e.target;
             while (target.nodeType != 1) target = target.parentNode;
 
