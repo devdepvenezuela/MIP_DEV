@@ -46,13 +46,12 @@ myScroll = new iScroll('wrapper', {
 
             if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
                	e.preventDefault();
-                e.stopPropagation();
-            } else {/*
+            } else {
                 $(target).bind('blur', function(){
                     window.scrollTo(0,0);
                     myScroll.refresh();
                 });
-			*/
+			
             }
         }
     });
@@ -137,6 +136,7 @@ function menu(opcion){
 		document.body.style.height = screen.availHeight + 'px';*/
 		myScroll.refresh();
 		myScroll.scrollTo(0,0);
+		document.body.style.height = screen.availHeight + 'px';
 		if(opcion == '2')
 		{
 			var docname = document.getElementById("med_nombre");
