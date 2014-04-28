@@ -77,29 +77,37 @@ input[type=button] {
 <div id="contact">
 <form>
 		<fieldset>
+        <div id="nombre">
 			<label for="med_nombre">Nombre:</label><br />
-			<input type="text"  id="med_nombre" placeholder="Ingrese su nombre" />
-            
+			<input type="text"  id="med_nombre" onfocus="doIt('#nombre')" placeholder="Ingrese su nombre" />
+            </div>
+            <div id="cedula">
             <label for="med_ci">Cedula:</label><br />
-			<input type="text"  id="med_ci" placeholder="Ingrese su cedula" />
-            
+			<input type="text"  id="med_ci" onfocus="doIt('#cedula')" placeholder="Ingrese su cedula" />
+            </div>
+            <div id="telefono">
             <label for="med_telf">Telefono:</label><br />
-			<input type="number"  id="med_telf" placeholder="Ingrese su telefono" />
-            
+			<input type="number"  id="med_telf" onfocus="doIt('#telefono')" placeholder="Ingrese su telefono" />
+            </div>
+            <div id="centro">
              <label for="med_centro">Centro:</label><br />
-			<input type="text"  id="med_centro" placeholder="Ingrese su centro" />
-            
+			<input type="text"  id="med_centro" onfocus="doIt('#centro')" placeholder="Ingrese su centro" />
+            </div>
+            <div id="especialidad">
              <label for="med_especialidad">Especialidad:</label><br />
-			<input type="text"  id="med_especialidad" placeholder="Ingrese su especialidad" />
+			<input type="text"  id="med_especialidad" onfocus="doIt('#especialidad')" placeholder="Ingrese su especialidad" />
+            </div>
          <div id="mail">
 			<label for="med_email">Email:</label><br />
-			<input type="email" onfocus="doIt()" id="med_email" placeholder="Ingrese su email" />
+			<input type="email" onfocus="doIt('#email')" id="med_email" placeholder="Ingrese su email" />
             </div>
+            <div id="pais">
            <label for="med_pais">Pais:</label><br/>
-             <select  id = "med_pais">
+             <select onfocus="doIt('#pais')"  id = "med_pais">
                <option value = "VE">Venezuela</option>
                <option value = "CO">Colombia</option>
              </select>
+             </div>
              <br/>
 			
 			<input  onclick="save()" type="button" value="Guardar" />		
