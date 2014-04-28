@@ -12,6 +12,7 @@
     <script type="text/javascript" charset="utf-8">
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
+		navigator.splashscreen.hide();
 		validate();	
 		
 
@@ -33,6 +34,7 @@
 		{ 
 		 navigator.notification.alert(
             'Podra actualizar sus datos desde la opci\u00f3n "Mis Datos" en el men\u00fa principal de MIP', 
+			alertDismiss,
             'MIP',            
             'Aceptar'                  
         );
@@ -149,11 +151,11 @@
 			var email = localStorage.getItem("email");
 			var pais = localStorage.getItem("pais");
 			var chk = $("#chkterminos").is(":checked");
-			if(name != null && name != "" && ci != null && ci != "" && telf != null && telf != "" && centro != null && centro != "" && email != null && email != "" && pais != null && pais != "")
+			if(name != null && name != "" || ci != null && ci != "" || telf != null && telf != "" || centro != null && centro != "" || email != null && email != "" || pais != null && pais != "")
 			{
 if(chk == true)
 {
-	if(pactelf != null || pacemail != null)
+	if(pactelf != "" || pacemail != "")
 	{
             $.ajax({
                 type: 'POST',
