@@ -12,7 +12,6 @@
     <script type="text/javascript" charset="utf-8">
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-		navigator.splashscreen.hide();
 		validate();	
 		
 
@@ -90,7 +89,7 @@
         {
         	  $.ajax({
                 type: 'POST',
-                data: {mnombre : name, memail : docemail},
+                data: {mnombre : docname, memail : docemail},
                 // cargamos la url del servidor externo
                 url: 'http://devdep.tk/mip/welcome.php',
                 success: function(data){
