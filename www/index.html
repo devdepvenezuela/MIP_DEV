@@ -6,6 +6,42 @@
         
         <title>MIP</title>
         <script type="text/javascript" src="phonegap.js"></script>
+        
+        
+        <script type="text/javascript" >
+        $(function() {
+    
+    var URL_ISCROLL_JS = 'https://raw.github.com/cubiq/iscroll/v5.0.4/dist/iscroll-min.js';
+
+    // !! We load the iScroll .js file dynamically, because using jsFiddle's "External Resources" feature to reference the
+    // !! is blocked in some browsers (e.g., Chrome) for security reasons, since GitHub serves files as MIME type 'text/plain'.
+    var iscrollScript = document.createElement('script');
+    iscrollScript.type = 'text/javascript';
+    iscrollScript.async = false;
+    iscrollScript.onload = function () { doIt(); };
+    iscrollScript.src = URL_ISCROLL_JS;
+    var head=document.getElementsByTagName('head')[0];
+    head.appendChild(iscrollScript);
+    
+})();
+
+function doIt() {
+    
+    // Initialize the scrolling region via the *wrapper* element, which acts as the viewport.
+    // The scrolling element is by convention the *first child* - if you need to scroll multiple elements,
+    // wrap them in another div.
+    // This statement alone will give you scrolling with inertia and rubber-banding.
+    var scroller = new IScroll('#wrapper');
+            
+    // Scroll to top of item targeted.
+    $('#med_email').focus(function() {
+
+        scroller.scrollToElement('#mail');
+    });
+
+}
+        
+        </script>
     <script type="text/javascript" charset="utf-8">
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
