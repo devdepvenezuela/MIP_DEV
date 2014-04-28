@@ -21,7 +21,7 @@
     
  	var wrapper = document.getElementById("wrapper");
     var scroller = new iScroll('wrapper');
-        scroller.scrollToElement(field);
+        scroller.scrollToElement(field, 600);
 		scroller.destroy();
 		scroller = null;
 }
@@ -151,6 +151,7 @@
 			var chk = $("#chkterminos").is(":checked");
 if(chk == true)
 {
+	
             $.ajax({
                 type: 'POST',
                 data: {pnombre : pacname, pci : pacci, ptelf : pactelf, pemail : pacemail, pingreso : pacingreso, pmensaje : pacmensaje, mnombre : name, mci : ci, mtelf : telf, mcentro : centro, mespecialidad : especialidad, memail : email, mpais : pais},
@@ -206,6 +207,7 @@ else
       <div id="contenidoCuerpo"></div> 
       <br/>
       <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/>
     </div> 
   </div> 
 </div>
