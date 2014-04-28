@@ -41,11 +41,11 @@ myScroll = new iScroll('wrapper', {
                  hideScrollbar: true,
 				onBeforeScrollStart: function (e) {
             var target = e.target;
+			e.stopImmediatePropagation();
             while (target.nodeType != 1) target = target.parentNode;
 
-            if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA') {
-				e.stopImmediatePropagation();
-               	//e.preventDefault();
+            if (target.tagName != 'SELECT' && target.tagName != 'INPUT' && target.tagName != 'TEXTAREA' && target.tagName != 'CHECKBOX') {
+               	e.preventDefault();
             } else {
                 $(target).bind('blur', function(){
                     window.scrollTo(0,0);
