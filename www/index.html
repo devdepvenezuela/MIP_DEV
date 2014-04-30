@@ -69,6 +69,7 @@
     }
 	
     function save() {
+		document.getElementById("save").disabled=true;
 		var docname = document.getElementById("med_nombre").value;
 		var docci = document.getElementById("med_ci").value;
 		var doctelf = document.getElementById("med_telf").value;
@@ -123,6 +124,7 @@
         );
 		
 		}
+		document.getElementById("save").disabled=false;
 		menu('0');
     }
 
@@ -136,6 +138,7 @@
 		}
 				
 		function register() {
+			document.getElementById("btnregister").disabled=true;
 		var pacname = document.getElementById("pac_nombre").value;
 		var pacci = document.getElementById("pac_ci").value;
 		var pactelf = document.getElementById("pac_telf").value;		
@@ -169,6 +172,7 @@ if(chk == true)
             'MIP',            
             'Aceptar'                  
         );
+		document.getElementById("btnregister").disabled=false;
 		menu('0');
                 },
                 error: function(data){
