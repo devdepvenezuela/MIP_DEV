@@ -96,10 +96,12 @@ select {
                 <label for="pac_ingreso">Ingreso:</label><br/>
              <select onfocus="doIt('#ingreso')"  id = "pac_ingreso">
              <option selected="selected" value = "">Seleccione...</option>
+             <option value = "Artritis Idiopática Juvenil">Artritis Idiopática Juvenil</option>
+             <option value = "Artritis  Psoriática (APs)">Artritis  Psoriática (APs)</option>
                <option value = "Artritis Reumatoide (AR)">Artritis Reumatoide (AR)</option>
-               <option value = "Artritis Prosística (APs)">Artritis Prosística (APs)</option>
                 <option value = "Enfermedad de Crohn (EC)">Enfermedad de Crohn (EC)</option>
                <option value = "Espondilitis Anquilosante (EA)">Espondilitis Anquilosante (EA)</option>
+               <option value = "Espondilitis Axial No Radiográfica">Espondilitis Axial No Radiográfica</option>
                <option value = "Psoriasis (PS)">Psoriasis (PS)</option>
                <option value = "Colitis Ulcerativa">Colitis Ulcerativa</option>
                <option value = "Otros">Otros</option>
@@ -110,7 +112,7 @@ select {
 			<textarea onfocus="doIt('#mensaje')" id="pac_mensaje"  placeholder="Ingrese un mensaje adicional"></textarea> 
             </div>
 			 <div id="terminos">
-                 <label for="chkterminos">Acepta el paciente los terminos y condiciones del programa?</label><br />
+                 <label for="chkterminos">Confirmo que el paciente manifestó su voluntad de ser contactado por el programa de pacientes Acompañarte</label><br />
                     <input onfocus="doIt('#terminos')"  type="checkbox" id="chkterminos" />
                     </div>
 			<input id="btnregister" type="button" onclick="register()"  value="Registrar" />
