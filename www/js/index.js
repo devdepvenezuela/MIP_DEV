@@ -125,7 +125,7 @@ function menu(opcion){
 		// Recogemos mediante ajax el contenido del html seg?n la opci?n clickeada en el menu
 		xhReq.open("GET", "opciones/opcion"+opcion+".html", false);
 		xhReq.send(null);
-		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
+		document.getElementById("contenidoCuerpo1").innerHTML=xhReq.responseText;
 		
 		// Refrescamos el elemento iscroll seg?n el contenido ya a?adido mediante ajax, y hacemos que se desplace al top
 		/*myScroll.refresh();
