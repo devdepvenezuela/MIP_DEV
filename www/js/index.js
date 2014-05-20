@@ -29,7 +29,7 @@ var app = {
 		// Leemos por ajax el archivos opcion1.html de la carpeta opciones
 		xhReq.open("GET", "opciones/opcion0.html", false);
 		xhReq.send(null);
-		document.getElementById("contenidoCuerpo").innerHTML=xhReq.responseText;
+		document.getElementById("contenidoCuerpo1").innerHTML=xhReq.responseText;
 
 		// Leemos por ajax el archivos menu.html de la carpeta opciones
 		xhReq.open("GET", "opciones/menu.html", false);
