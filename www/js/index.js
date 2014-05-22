@@ -70,7 +70,8 @@ myScroll = new iScroll('wrapper', {
             }
         }
     });
-	
+	myScroll.destroy();
+	myScroll = null;
         this.bindEvents();
     },
 
