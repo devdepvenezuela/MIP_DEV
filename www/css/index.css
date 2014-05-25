@@ -1,5 +1,6 @@
-* {
-	-webkit-user-select: text;
+*:not(input,textarea,select) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
 }
 
 body {
