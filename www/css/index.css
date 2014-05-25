@@ -1,8 +1,8 @@
-*:not(input,textarea,select) {
-    -webkit-touch-callout: none;
+*{
+    -webkit-touch-callout:none;
     -webkit-user-select: text;
 }
-
+/*
 input
 {
     -webkit-user-select: auto !important;
@@ -16,7 +16,7 @@ select
 textarea
 {
     -webkit-user-select: auto !important;
-}
+}*/
 
 body {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
